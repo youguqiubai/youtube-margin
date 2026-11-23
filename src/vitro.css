@@ -78,6 +78,9 @@ html.vt-on #right-arrow-button.ytd-feed-filter-chip-bar-renderer {
   border-radius: 50%;
 }
 
+/* MARGIN：推荐过滤命中的卡片隐藏 */
+.vt-filtered { display: none !important; }
+
 /* ---------- Camadas de fundo ---------- */
 
 #vt-wallpaper,

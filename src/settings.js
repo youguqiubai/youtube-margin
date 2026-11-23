@@ -61,6 +61,9 @@ globalThis.VITRO_DEFAULTS = {
 
   // Página de vídeo
   room: true,
+
+  // MARGIN：本地足迹（观看时长热力图）
+  footprint: true,
 };
 
 // Junta o que está salvo com os padrões, descartando chaves desconhecidas

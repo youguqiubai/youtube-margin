@@ -48,7 +48,7 @@ test("manifest: mensagens __MSG_ existem em todos os locales", () => {
 test("popup carrega settings e i18n antes do popup.js", () => {
   const html = read("popup/popup.html");
   const scripts = [...html.matchAll(/<script src="([^"]+)"/g)].map((m) => m[1]);
-  assert.deepEqual(scripts, ["../src/settings.js", "../src/i18n.js", "popup.js"]);
+  assert.deepEqual(scripts, ["../src/settings.js", "../src/footprint.js", "../src/i18n.js", "popup.js"]);
 });
 
 test("wallpapers: ids únicos, arquivos presentes e nomes traduzidos", () => {

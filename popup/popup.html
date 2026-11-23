@@ -47,9 +47,37 @@
       </select>
     </section>
 
+    <section>
+      <h2>推荐过滤</h2>
+      <label><span>启用过滤</span> <button class="switch" id="filter-on" role="switch"></button></label>
+      <label class="col"><span>标题关键词（逗号分隔）</span>
+        <input id="f-keywords" type="text" placeholder="恰饭, 广告, 剧透" autocomplete="off" /></label>
+      <label class="col"><span>频道关键词（逗号分隔）</span>
+        <input id="f-channels" type="text" placeholder="某个 UP 的名字" autocomplete="off" /></label>
+      <div class="row2">
+        <label class="col"><span>最低播放量</span>
+          <input id="f-minviews" type="number" min="0" placeholder="0" /></label>
+        <label class="col"><span>最长时长（分）</span>
+          <input id="f-maxdur" type="number" min="0" placeholder="0" /></label>
+      </div>
+    </section>
+
+    <section>
+      <h2>足迹热力图</h2>
+      <div class="heat-sum" id="heat-sum"></div>
+      <div class="heat" id="heat"></div>
+      <div class="heat-foot"><span>少</span><i class="l1"></i><i class="l2"></i><i class="l3"></i><i class="l4"></i><i class="l5"></i><span>多</span><button id="heat-clear" class="link">清空</button></div>
+    </section>
+
+    <section>
+      <h2>命令面板</h2>
+      <p class="hint">按 <kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>K</kbd> 呼出，键盘完成跳转、开关与外观切换</p>
+    </section>
+
     <footer><button id="reset" class="link" data-i18n="popup.reset"></button></footer>
 
     <script src="../src/settings.js"></script>
+    <script src="../src/footprint.js"></script>
     <script src="../src/i18n.js"></script>
     <script src="popup.js"></script>
   </body>

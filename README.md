@@ -1,3 +1,19 @@
+# MARGIN for YouTube
+
+> **本仓库是 [johwconst/better-youtube-ui](https://github.com/johwconst/better-youtube-ui)（Vitro）的 fork**，
+> 在它原有的玻璃质感美化之上，参照 B 站的 [映间 MARGIN](https://github.com/jiuyang5354/bilibili-margin)
+> 补齐了三个能力：
+>
+> | 能力 | 文件 | 说明 |
+> | --- | --- | --- |
+> | 推荐过滤 | `src/filter.js` | 按关键词 / 频道 / 播放量 / 时长隐藏推荐流卡片，规则在扩展弹窗里配 |
+> | 足迹热力图 | `src/footprint.js` | 本地按天记录观看时长（15 秒采样），弹窗内 GitHub 风格周热力图 |
+> | 命令面板 | `src/palette.js` | `Ctrl`/`⌘ + K` 呼出，键盘完成跳转、开关、外观切换 |
+>
+> ⚠️ **许可**：原项目未附带 LICENSE 文件。本 fork 建议个人使用；若要公开发布或二次分发，请先联系原作者确认。
+>
+> ---
+>
 # Vitro — YouTube in glass
 
 **English** | [Português](README.pt-BR.md)

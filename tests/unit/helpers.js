@@ -10,16 +10,23 @@ export const read = (p) => readFileSync(join(ROOT, p), "utf8");
 export const readJSON = (p) => JSON.parse(read(p));
 
 export function fakeChrome({ uiLanguage = "en-US", stored = undefined } = {}) {
-  const store = { settings: stored };
+  const syncStore = { settings: stored };
+  const localStore = {};
   return {
-    store,
+    syncStore, localStore,
+    store: syncStore, // 向后兼容旧测试（等价于原 sync store）
     i18n: { getUILanguage: () => uiLanguage },
     runtime: { getURL: (p) => `chrome-extension://test/${p}` },
     storage: {
       sync: {
-        get: async (key) => ({ [key]: store[key] }),
-        set: async (obj) => Object.assign(store, obj),
+        get: async (key) => ({ [key]: syncStore[key] }),
+        set: async (obj) => Object.assign(syncStore, obj),
       },
+      local: {
+        get: async (key) => ({ [key]: localStore[key] }),
+        set: async (obj) => Object.assign(localStore, obj),
+      },
+      onChanged: { addListener: () => {} },
     },
   };
 }

@@ -382,6 +382,13 @@
     else room.stop();
     if (isHome) updateHero();
     searchChips.sync(page === "results");
+    // MARGIN：推荐过滤跟着路由走
+    if (globalThis.VitroFilter) globalThis.VitroFilter.route(page);
+    // MARGIN：足迹只在 watch 页采样
+    if (globalThis.VitroFootprint) {
+      if (isWatch && S.footprint) globalThis.VitroFootprint.startTracking();
+      else globalThis.VitroFootprint.stopTracking();
+    }
   }
 
   document.addEventListener("yt-navigate-start", redirectShorts);

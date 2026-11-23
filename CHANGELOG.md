@@ -41,6 +41,14 @@ O formato segue o [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/) e 
 - Itens condicionais dos painéis do editor podiam aparecer como o texto "false".
 - Botão ⚡ do editor podia levar até 3s para aparecer quando a página já chegava pronta (achado pelos testes E2E).
 
+## [1.2.0] - 2026-11-23
+
+### Adicionado (fork MARGIN)
+- 推荐过滤：按关键词 / 频道 / 播放量 / 时长隐藏推荐卡片（`src/filter.js`）
+- 足迹热力图：本地按天记录观看时长，弹窗内周热力图（`src/footprint.js`）
+- 命令面板：`Ctrl`/`⌘ + K` 呼出（`src/palette.js`）
+- 弹窗新增过滤规则编辑、足迹视图与命令面板说明
+
 ## [1.1.0] - 2026-11-04
 
 ### Adicionado
